@@ -1,0 +1,17 @@
+<div id="container">
+    <div id="left-container">
+
+        <div class="tab-item" ng-repeat="item in menuItems" ng-class="{'visited': ($index <= $parent.pageIndex)}">
+            <div class="circle"></div>
+            <div>{{item.text}}</div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div id="right-container">
+        <div id="form-container" ui-view></div>
+        <div id="buttonContainer" ng-if="pageIndex < routes.length-1">
+            <button type="button" class="button" ng-click="saveAsDraft()">Save as draft</button>
+            <button type="button" class="button btn-green" ng-click="handleNext()">Next</button>
+        </div>
+    </div>
+</div>
