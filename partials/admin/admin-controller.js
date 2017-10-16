@@ -1,4 +1,4 @@
-angular.module('sampleApp').controller('AdminController', AdminController);
+angular.module('AdminControllerModule').controller('AdminController', AdminController);
 
 AdminController.$inject = ['$scope', 'AdminService', '$state'];
 
