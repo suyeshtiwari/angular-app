@@ -1,4 +1,4 @@
-angular.module('AdminServiceModule').factory('AdminService', AdminService);
+angular.module('AdminServiceModule', []).factory('AdminService', AdminService);
 
 function AdminService(){
     var service = {

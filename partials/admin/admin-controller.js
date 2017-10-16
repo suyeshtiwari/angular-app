@@ -1,12 +1,8 @@
-angular.module('AdminControllerModule').controller('AdminController', AdminController);
+angular.module('AdminControllerModule', []).controller('AdminController', AdminController);
 
 AdminController.$inject = ['$scope', 'AdminService', '$state'];
 
 function AdminController($scope, AdminService, $state){
-	console.log('AdminController called');
-	//Global variables
-	
-
 	// Variables in $scope 
 	$scope.menuItems = AdminService.menuItems;
 	$scope.routes = AdminService.routes;
