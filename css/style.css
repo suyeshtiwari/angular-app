@@ -59,12 +59,16 @@ img {font-size: 0;}
 }
 .button:hover, .button:focus, .button:active {
   text-decoration: none;
-  color: inherit;
 }
 .button.btn-green {
   background-color: #47D7AC;
   border: 1px solid #47D7AC;
   color: #FFF;
+}
+.button.btn-green-plain {
+  background-color: transparent;
+  color: #47D7AC;
+  border-color: #47D7AC;
 }
 
 .label {
@@ -78,12 +82,14 @@ img {font-size: 0;}
   font-size: 12px;
   color: #9B9B9B;
   line-height: 15px;
+  margin-bottom: 15px;
 }
 input[type=text] { height: 36px; }
 input[type=text], textarea {
   border: 1px solid #D8D8D8;
   width: 100%;
-  margin-top: 15px;
+  padding: 10px;
+  font-size: 13px
 }
 textarea { resize: none; }
 .form-item {
@@ -140,4 +146,24 @@ textarea { resize: none; }
 .address-item .form-item{ float: left; width: 18%; margin-right: 5%; }
 .address-item .form-item:first-child{ width: 30%; }
 .address-item .form-item:last-child{ margin-right: 0; }
+.tags-container button {
+  width: 33%; 
+  margin-bottom: 20px; 
+  border-radius: 23px;
+  color: #fff;
+}
+.uploadImgContainer {
+  border: 1px solid #D8D8D8;
+  width: 140px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  float: left;
+  margin-right: 16px;
+  position: relative;
+}
+.uploadImgContainer.add { background: #D8D8D8; }
+.uploadImgContainer.add div { position: absolute;}
+.uploadImgContainer.add div:first-child{ height: 40px; left: 70px; border-left: 1px solid #FFFFFF;}
+.uploadImgContainer.add div:last-child{ width: 41px; left: 50px; border-top: 1px solid #FFFFFF;}
 /* Right container styles ends here */
