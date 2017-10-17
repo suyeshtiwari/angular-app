@@ -7,6 +7,7 @@ function AdminController($scope, AdminService, $state){
 	$scope.menuItems = AdminService.menuItems;
 	$scope.routes = AdminService.routes;
 	$scope.pageIndex = $scope.routes.indexOf($state.current.name) || 0;
+	$scope.showSpaceImg = false;
 	
 	// Functions in $scope
 	$scope.handleNext = HandleNext;
@@ -14,6 +15,10 @@ function AdminController($scope, AdminService, $state){
 
 	function HandleNext () {
 		if (($scope.routes.length - 1) <= $scope.pageIndex) {
+			return;
+		}
+		if ($scope.pageIndex === 1 && !$scope.showSpaceImg ) {
+			$scope.showSpaceImg = true;
 			return;
 		}
 		$scope.pageIndex++;
